@@ -1,0 +1,23 @@
+program: train.py
+project: test1
+entity: eckim
+method: random
+metric:
+  goal: minimize
+  name: loss
+parameters:
+  optimizer:
+    values: ['adam', 'sgd']
+  dropout:
+    values: [0.3, 0.4, 0.5]
+  epochs:
+    values: [5, 6]
+  learning_rate:
+    distribution: uniform
+    min: 0
+    max: 0.1
+early_terminate:
+  type: hyperband
+  s: 2
+  eta: 3
+  max_iter: 27

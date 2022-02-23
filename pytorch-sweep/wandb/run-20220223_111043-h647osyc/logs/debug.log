@@ -1,0 +1,145 @@
+2022-02-23 11:10:43,711 INFO    Thread-23 :1698414 [wandb_setup.py:_flush():75] Loading settings from /home/eunchan/.config/wandb/settings
+2022-02-23 11:10:43,712 INFO    Thread-23 :1698414 [wandb_setup.py:_flush():75] Loading settings from wandb/settings
+2022-02-23 11:10:43,712 INFO    Thread-23 :1698414 [wandb_setup.py:_flush():75] Loading settings from environment variables: {'entity': 'eckim', 'project': 'sweeps-random', 'root_dir': '/home/eunchan/Desktop/Study/Wandb-sweeps', 'run_id': 'h647osyc', 'sweep_param_path': '/home/eunchan/Desktop/Study/Wandb-sweeps/wandb/sweep-233dsju3/config-h647osyc.yaml', 'sweep_id': '233dsju3'}
+2022-02-23 11:10:43,712 INFO    Thread-23 :1698414 [wandb_setup.py:_flush():75] Inferring run settings from compute environment: {'program_relpath': 'train.py', 'program': 'train.py'}
+2022-02-23 11:10:43,712 INFO    Thread-23 :1698414 [wandb_init.py:_log_setup():386] Logging user logs to /home/eunchan/Desktop/Study/Wandb-sweeps/wandb/run-20220223_111043-h647osyc/logs/debug.log
+2022-02-23 11:10:43,712 INFO    Thread-23 :1698414 [wandb_init.py:_log_setup():387] Logging internal logs to /home/eunchan/Desktop/Study/Wandb-sweeps/wandb/run-20220223_111043-h647osyc/logs/debug-internal.log
+2022-02-23 11:10:43,712 INFO    Thread-23 :1698414 [wandb_init.py:init():420] calling init triggers
+2022-02-23 11:10:43,712 INFO    Thread-23 :1698414 [wandb_init.py:init():425] wandb.init called with sweep_config: {'batch_size': 67, 'dropout': 0.4, 'epochs': 6, 'learning_rate': 0.04797637257156995, 'optimizer': 'sgd'}
+config: {'epochs': 2, 'batch_size': 128, 'fc_layer_size': 128, 'weight_decay': 0.0005, 'learning_rate': 0.001, 'activation': 'relu', 'optimizer': 'adam', 'seed': 42}
+2022-02-23 11:10:43,712 INFO    Thread-23 :1698414 [wandb_init.py:init():471] starting backend
+2022-02-23 11:10:43,712 INFO    Thread-23 :1698414 [backend.py:_multiprocessing_setup():99] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2022-02-23 11:10:43,715 INFO    Thread-23 :1698414 [backend.py:ensure_launched():219] starting backend process...
+2022-02-23 11:10:43,744 INFO    Thread-23 :1698414 [backend.py:ensure_launched():224] started backend process with pid: 1699040
+2022-02-23 11:10:43,745 INFO    Thread-23 :1698414 [wandb_init.py:init():480] backend started and connected
+2022-02-23 11:10:43,745 INFO    Thread-23 :1698414 [wandb_run.py:_config_callback():966] config_cb None None {'batch_size': 67, 'dropout': 0.4, 'epochs': 6, 'learning_rate': 0.04797637257156995, 'optimizer': 'sgd'}
+2022-02-23 11:10:43,747 INFO    Thread-23 :1698414 [wandb_init.py:init():550] updated telemetry
+2022-02-23 11:10:43,748 INFO    Thread-23 :1698414 [wandb_init.py:init():581] communicating current version
+2022-02-23 11:10:44,191 INFO    Thread-23 :1698414 [wandb_init.py:init():586] got version response 
+2022-02-23 11:10:44,191 INFO    Thread-23 :1698414 [wandb_init.py:init():596] communicating run to backend with 30 second timeout
+2022-02-23 11:10:44,408 INFO    Thread-23 :1698414 [wandb_init.py:init():624] starting run threads in backend
+2022-02-23 11:10:45,751 INFO    Thread-23 :1698414 [wandb_run.py:_console_start():1827] atexit reg
+2022-02-23 11:10:45,752 INFO    Thread-23 :1698414 [wandb_run.py:_redirect():1701] redirect: SettingsConsole.REDIRECT
+2022-02-23 11:10:45,752 INFO    Thread-23 :1698414 [wandb_run.py:_redirect():1706] Redirecting console.
+2022-02-23 11:10:45,752 ERROR   Thread-23 :1698414 [wandb_run.py:_redirect():1765] Failed to redirect.
+Traceback (most recent call last):
+  File "/home/eunchan/miniconda3/envs/python38/lib/python3.8/site-packages/wandb/sdk/wandb_run.py", line 1758, in _redirect
+    out_redir.install()
+  File "/home/eunchan/miniconda3/envs/python38/lib/python3.8/site-packages/wandb/sdk/lib/redirect.py", line 709, in install
+    _WSCH.add_fd(self._pipe_read_fd)
+  File "/home/eunchan/miniconda3/envs/python38/lib/python3.8/site-packages/wandb/sdk/lib/redirect.py", line 659, in add_fd
+    self._register()
+  File "/home/eunchan/miniconda3/envs/python38/lib/python3.8/site-packages/wandb/sdk/lib/redirect.py", line 644, in _register
+    old_handler = signal.signal(signal.SIGWINCH, lambda *_: None)
+  File "/home/eunchan/miniconda3/envs/python38/lib/python3.8/signal.py", line 47, in signal
+    handler = _signal.signal(_enum_to_int(signalnum), _enum_to_int(handler))
+ValueError: signal only works in main thread
+2022-02-23 11:10:45,753 INFO    Thread-23 :1698414 [wandb_init.py:init():651] run started, returning control to user process
+2022-02-23 11:10:45,798 INFO    Thread-23 :1698414 [wandb_watch.py:watch():43] Watching
+2022-02-23 11:10:54,064 INFO    Thread-23 :1698414 [wandb_run.py:finish():1468] finishing run eckim/sweeps-random/h647osyc
+2022-02-23 11:10:54,064 INFO    Thread-23 :1698414 [wandb_run.py:_atexit_cleanup():1797] got exitcode: 0
+2022-02-23 11:10:54,065 INFO    Thread-23 :1698414 [wandb_run.py:_restore():1769] restore
+2022-02-23 11:10:54,078 INFO    Thread-23 :1698414 [wandb_run.py:_wait_for_finish():1929] got exit ret: file_counts {
+  wandb_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 535
+  total_bytes: 535
+}
+
+2022-02-23 11:10:54,373 INFO    Thread-23 :1698414 [wandb_run.py:_wait_for_finish():1929] got exit ret: file_counts {
+  wandb_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 535
+  total_bytes: 535
+}
+
+2022-02-23 11:10:54,476 INFO    Thread-23 :1698414 [wandb_run.py:_wait_for_finish():1929] got exit ret: file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 535
+  total_bytes: 48115
+}
+
+2022-02-23 11:10:54,579 INFO    Thread-23 :1698414 [wandb_run.py:_wait_for_finish():1929] got exit ret: file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 535
+  total_bytes: 48115
+}
+
+2022-02-23 11:10:54,681 INFO    Thread-23 :1698414 [wandb_run.py:_wait_for_finish():1929] got exit ret: file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 535
+  total_bytes: 48115
+}
+
+2022-02-23 11:10:54,785 INFO    Thread-23 :1698414 [wandb_run.py:_wait_for_finish():1929] got exit ret: file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 48115
+  total_bytes: 48115
+}
+
+2022-02-23 11:10:54,888 INFO    Thread-23 :1698414 [wandb_run.py:_wait_for_finish():1929] got exit ret: file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 48115
+  total_bytes: 48115
+}
+
+2022-02-23 11:10:54,992 INFO    Thread-23 :1698414 [wandb_run.py:_wait_for_finish():1929] got exit ret: file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 48115
+  total_bytes: 48115
+}
+
+2022-02-23 11:10:55,096 INFO    Thread-23 :1698414 [wandb_run.py:_wait_for_finish():1929] got exit ret: file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 48115
+  total_bytes: 48115
+}
+
+2022-02-23 11:10:55,200 INFO    Thread-23 :1698414 [wandb_run.py:_wait_for_finish():1929] got exit ret: file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 48115
+  total_bytes: 48115
+}
+
+2022-02-23 11:10:55,950 INFO    Thread-23 :1698414 [wandb_run.py:_wait_for_finish():1929] got exit ret: file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 48115
+  total_bytes: 48115
+}
+
+2022-02-23 11:10:56,444 INFO    Thread-23 :1698414 [wandb_run.py:_wait_for_finish():1929] got exit ret: done: true
+exit_result {
+}
+file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 48115
+  total_bytes: 48115
+}
+local_info {
+}
+
+2022-02-23 11:10:57,627 INFO    Thread-23 :1698414 [wandb_run.py:_append_history():2144] rendering history
+2022-02-23 11:10:57,628 INFO    Thread-23 :1698414 [wandb_run.py:_append_summary():2102] rendering summary
+2022-02-23 11:10:57,628 INFO    Thread-23 :1698414 [wandb_run.py:_append_files():2194] logging synced files
