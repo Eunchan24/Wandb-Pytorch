@@ -5,13 +5,14 @@ from torchvision import transforms
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 
 hyperparameter_defaults  = {
-        'epochs': 2,
         'batch_size': 128,
-        'fc_layer_size': 128,
-        'weight_decay': 0.0005,
         'learning_rate': 1e-3,
+        'weight_decay': 0.0005,
         'activation': 'relu',
         'optimizer': 'adam',
+        'hidden_nodes' : 120,
+        'conv1_channels' : 5,
+        'conv2_channels' : 16,
         'seed': 42
     }
 
@@ -30,7 +31,7 @@ sweep_config = {
             'values': [0.3, 0.4, 0.5]
             },
         'epochs': {
-            'values': [5, 6]
+            'values': [100]
             },
         'learning_rate': {
             'distribution': 'uniform',
@@ -52,6 +53,7 @@ sweep_config = {
         },
     }
 
+
 train_transform = transforms.Compose(
-        [transforms.ToTensor(),
-         transforms.Normalize((0.1307,), (0.3081,))])
+    [transforms.ToTensor(),
+     transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))])
